@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>M.Y.Study</title>
+</head>
+<body style="font-family:sans-serif;text-align:center;padding:40px">
+<h3>جاري فتح M.Y.Study...</h3>
+<p><a id="open" href="#">لو التطبيق مفتحش دوس هنا</a></p>
+<script>
+var key = new URLSearchParams(location.search).get("c");
+if (key) {
+  var link = "mystudy://channel/" + key;
+  document.getElementById("open").href = link;
+  window.location.href = link;
+}
+</script>
+</body>
+</html>
